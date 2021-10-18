@@ -32,14 +32,17 @@ const init = () => {
   player1El.classList.remove("player--active");
   player0El.classList.remove("player--winner");
   player1El.classList.remove("player--winner");
-  playerName0.textContent =
-    prompt(`Please enter your name for Player 1`) === null || ""
-      ? `Player 1`
-      : prompt();
-  playerName1.textContent =
-    prompt(`Please enter your name for Player 2`) == null || ""
-      ? `Player 2`
-      : prompt();
+  playerName0.textContent = prompt(`Please enter your name for Player 1`);
+  playerName1.textContent = prompt(`Please enter your name for Player 2`);
+
+  // playerName0.textContent =
+  //   prompt(`Please enter your name for Player 1`) != null || ""
+  //     ? prompt(`Please enter your name for Player 1.1`)
+  //     : `Player 1`;
+  // playerName1.textContent =
+  //   prompt(`Please enter your name for Player 2`) == null || ""
+  //     ? `Player 2`
+  //     : prompt(`Please enter your name for Player 2.1`);
 };
 init();
 
