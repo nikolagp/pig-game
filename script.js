@@ -2,6 +2,8 @@
 
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
+const playerName0 = document.querySelector("#name--0");
+const playerName1 = document.querySelector("#name--1");
 const score0El = document.getElementById("score--0");
 const score1El = document.getElementById("score--1");
 const current0El = document.getElementById("current--0");
@@ -30,6 +32,14 @@ const init = () => {
   player1El.classList.remove("player--active");
   player0El.classList.remove("player--winner");
   player1El.classList.remove("player--winner");
+  playerName0.textContent =
+    prompt(`Please enter your name for Player 1`) === null || ""
+      ? `Player 1`
+      : prompt();
+  playerName1.textContent =
+    prompt(`Please enter your name for Player 2`) == null || ""
+      ? `Player 2`
+      : prompt();
 };
 init();
 
